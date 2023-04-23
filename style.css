@@ -1,0 +1,114 @@
+nav{
+    background-color: skyblue;
+    text-align: center;
+    text-shadow: 0px 0px 20px black;
+    padding: 10px;
+    font-size: larger;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: blue 2px solid;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+#left-panel{
+    display: inline-block;
+    width: 350px;
+    height: 650px;
+    background-color: #8cd4e675;
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.in{
+    display: block;
+    font-size: larger;
+    margin: auto;
+    width: 70%;
+    border: none;
+    padding: 5px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+#addp, .deleteRow, #calc, #reset{
+    margin-top: 10px;
+    background-color: rgba(9, 9, 104, 0.788);;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 10px;
+    border: none;
+    transition-duration: 1ms;
+    font-weight: bold;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.deleteRow{
+    margin: 0;
+}
+
+#addp:hover, .deleteRow:hover, #calc:hover, #reset:hover{
+    background-color: darkblue;
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgb(158, 158, 158);
+}
+
+#processTable{
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 90%;
+    /* border: 1px solid black;  */
+}
+
+#processTable th, #processTable td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 7px;
+}
+
+#right-panel{
+    width: 1140px;
+    position: absolute;
+    height: 670px;
+    background-color: #c5e1eec0;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+}  
+
+#start-message, #ans-table, #sts{
+    background-color: white;
+    border-radius: 10px;
+    padding: 7px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#sts{
+    margin-top: 20px;
+}
+
+#gantt-chart, #process-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

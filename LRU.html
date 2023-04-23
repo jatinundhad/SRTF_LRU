@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="LRU.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@100&family=Roboto:wght@100;400&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <title>LRU</title>
+
+    <style>
+        .in {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        Least Recently Used (LRU)
+    </nav>
+    <div id="left-panel">
+        <form onsubmit="event.preventDefault(); calculate();" autocomplete="off">
+            <label for="page-sequence" class="label">Reference Sequence</label>
+            <textarea type="text" id="page-sequence" class="in" placeholder="1,2,3,4,5,..." onchange="check_ref();"
+                required></textarea>
+            <label for="frames" class="label">No of frames</label>
+            <input type="text" id="frames" class="in" required>
+            <button type="submit" id="addp">Calculate</button>
+        </form>
+        <a href="index1.html"><button id="reset">Reset</button></a>
+    </div>
+
+    <div id="right-panel">
+        <h2>Output</h2>
+        <h4 id="start-message">Page Replacement matrix will be shown here</h4>
+
+        <table id="process-table">
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <div id="sts">
+            <h3 id="NoOfPF"></h3>
+            <h3 id="PageHit"></h3>
+            <h3 id="HitRatio"></h3>
+            <h3 id="MissRatio"></h3>
+        </div>
+    </div>
+</body>
+
+</html>

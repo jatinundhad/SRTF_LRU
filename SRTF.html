@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRTF algorithm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@100&family=Roboto:wght@100;400&family=Shizuru&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>SRTF (Shortest time remaining first)</nav>
+    <div id="left-panel">
+        <form onsubmit="event.preventDefault(); addRow();" autocomplete="off">
+            <label for="pid" class="label">Process ID:</label>
+            <input type="text" class="in" name="pid" id="pid" required>
+            <span id="e1" class="error"></span>
+            <label for="AT" class="label">Arrival Time:</label>
+            <input type="text" class="in" name="AT" id="AT" required>
+            <span id="e2" class="error"></span>
+            <label for="BT" class="label">Burst Time:</label>
+            <input type="text" class="in" name="BT" id="BT" required>
+            <span id="e3" class="error"></span>
+
+            <button id="addp">Add Process</button>
+        </form>
+
+        <table id="processTable">
+            <thead>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <span id="e4" class="error"></span>
+        <form onsubmit="event.preventDefault(); error(); calculate();">
+            <button id="calc">Calculate</button>
+        </form>
+
+        <a href="index.html"><button id="reset">Reset</button></a>
+    </div>
+
+    <div id="right-panel">
+        <h2>Output</h2>
+        <h4 id="start-message">Gantt chart and Table will be shown here</h4>
+
+        <table id="gantt-chart">
+            <tbody>
+                <!-- <tr>0</tr> -->
+            </tbody>
+        </table>
+
+        <h4 id="ans-table"></h4>
+        <table id="process-table">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="SRTF.js"></script>
+
+</html>
